@@ -64,8 +64,7 @@ function isCharAVowel(char) {
   
   Example: generateEmail('johnsmith', 'example.com') 
   should return 'johnsmith@example.com'.
-  
-  Complete the exercise in the space below:
+
   */
 
 
@@ -127,3 +126,37 @@ function calculateTip(billAmount, tipPercentage){
 }
 
 console.log(calculateTip(30, 18));
+
+// EXERCISE 8: CONVERT TEMPERATURE ()
+//TODO:
+// creating a function named convertTemperature(),
+// inserting the two arguments: a temperature and 
+// a string representing the temperature scale,'C' for celicius and 'F' for fahrenheit.
+// converting one temperature ecale into the other scale.
+
+function convertTemperature(temp, scale){
+  if (scale === 'C'){
+    return temp * 9 / 5 + 32; // converting celsius to fahrenheit.
+  }else {
+    return (temp - 32) * 5 / 9; // the output is the conversion of fahrenheit into celsius.
+  };
+} 
+console.log(convertTemperature(32, 'C'));
+
+// EXERCISE 9: 
+
+//TODO: 
+// creating a function named basicCalculator
+// adding three arguments: two numbers and a string rep. an operation.
+// Use/perfrom a chosen operation on the two numbers.
+let num1 = 6;
+let num2 = 4;
+
+function basicCalculator(num1, num2, operation) {
+  switch (operation) {
+    case 'multiply':
+      return num1 * num2;
+      }
+  }
+
+console.log(basicCalculator(6, 4, 'multiply'));
