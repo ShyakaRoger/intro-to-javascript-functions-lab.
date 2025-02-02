@@ -46,16 +46,18 @@ Example: isCharAVowel('a') should return true.
 Complete the exercise in the space below:
 */
 
-function isCharAVowel(char) {
     
-    if (char === 'a' , 'e' ,'i' , 'o' , 'u') {
-      return true;
+  function isCharAVowel(char) {
+    // Checking if the character is a vowel usig logical OR || method operator.
+    if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
+        return true;
     } else {
-      return false;
+        return false;
     }
-  }
-  
+}
+
   console.log('Exercise 3 Result:', isCharAVowel("a"));  //  logs true
+  console.log(isCharAVowel("k")) // this logs false because "k" is not a vowel.
 
   // Exercise 4: generateEmail()
 
@@ -99,12 +101,18 @@ and return the largest among them.
 
 */
 
-function maxOfThree(a,b,c ){
-    if (b>a && b>c){
-        return b;
-    }
+function maxOfThree(num1, num2, num3) {
+  if (num1 >= num2 && num1 >= num3) {
+      return num1;
+  } else if (num2 >= num1 && num2 >= num3) {
+      return num2;
+  } else {
+      return num3;
+  }
 }
-console.log(maxOfThree(6,10,4));
+
+// Test with the given numbers
+console.log(maxOfThree(6, 10, 4)); // Output is 10 which is the largest.
 
 /*
 Exercise 7: calculateTip()
@@ -118,14 +126,20 @@ given bill amount of 30 and a tip percentage of 18
 Complete the exercise in the space below:
 */
 
+//Define a function calculateTip that accepts two arguments: billAmount and tipPercentage
+//Convert the tipPercentage to a decimal by dividing it by 100.
+//Calculate the tip amount by multiplying the billAmount by the decimal tip percentage and returning the tip amount
+//
+
+const billAmount = 60; // bill amount.
+const tipPercentage = 15; // bill percentage
+
 function calculateTip(billAmount, tipPercentage){
-    if (billAmount === 30 && tipPercentage === 18){
-        return (billAmount * tipPercentage )/ 100;
-    }
-    
+    const tipAmount = billAmount * (tipPercentage/100);
+    return tipAmount;
 }
 
-console.log(calculateTip(30, 18));
+console.log(calculateTip(billAmount, tipPercentage));
 
 // EXERCISE 8: CONVERT TEMPERATURE ()
 //TODO:
@@ -146,17 +160,19 @@ console.log(convertTemperature(32, 'C'));
 // EXERCISE 9: 
 
 //TODO: 
-// creating a function named basicCalculator
+// creating a function named basicCalculator()
 // adding three arguments: two numbers and a string rep. an operation.
 // Use/perfrom a chosen operation on the two numbers.
-let num1 = 6;
-let num2 = 4;
 
-function basicCalculator(num1, num2, operation) {
-  switch (operation) {
-    case 'multiply':
-      return num1 * num2;
-      }
+let num1 = 20;
+let num2 = 8;
+
+function basicCalculator(num1, num2, operation){
+  switch (operation){
+    case 'add':
+      return num1 + num2;
   }
 
-console.log(basicCalculator(6, 4, 'multiply'));
+}
+
+console.log(basicCalculator(num1, num2, "add")); // this return 30
